@@ -35,6 +35,7 @@ Codigo:
 
 Imagen:
  
+![image](https://github.com/Mauricio7274/proyectoInventory/assets/99046250/920699df-f715-485b-83a8-442993abf5e5)
 
 
 
@@ -57,6 +58,7 @@ server.ssl.keyAlias=tomcat
 
 Imagen:
  
+![image](https://github.com/Mauricio7274/proyectoInventory/assets/99046250/9f9a3be7-bd49-43de-b7bd-f63a45f34cce)
 
 
 Asegúrate de reemplazar `keystore.p12` con el nombre real de tu archivo de certificado y clave privada, y `password` con la contraseña correspondiente.
@@ -94,7 +96,8 @@ public class MainApplication {
 }
 ```
 
-Imagen:
+Imagen: ![image](https://github.com/Mauricio7274/proyectoInventory/assets/99046250/c05a6c12-582f-4293-8029-cf50e0615ed6)
+
  
 
 
@@ -105,7 +108,11 @@ Ahora, puedes ejecutar el proyecto Java Spring Boot. Accederás a la API a trav�
 ```
 https://localhost:8443/tu-endpoint
 ```
- 
+ # Diagrama de componentes
+ ![image](https://github.com/Mauricio7274/proyectoInventory/assets/99046250/ced8dac3-d3d1-48ab-a54d-418e44a04f1a)
+
+# Diagrama de paquetes
+![image](https://github.com/Mauricio7274/proyectoInventory/assets/99046250/6d321d29-ef61-47cb-baa9-1e69b7d98d9a)
 
 # Getting Started
 
