@@ -1,5 +1,111 @@
 
 <div align="center">
+    
+## Cómo Levantar la API con HTTPS en Java Spring Boot
+
+Este documento proporciona instrucciones detalladas para configurar y levantar la API desarrollada en Java Spring Boot con soporte para HTTPS.
+
+
+Requisitos Previos
+Antes de comenzar, asegúrate de tener los siguientes elementos:
+
+1. Un certificado SSL/TLS válido (archivo `.pem` o `.crt`) y su clave privada (archivo `.key`).
+2. Maven instalado en tu sistema.
+3. Tener el proyecto Java Spring Boot para poder habilitar HTTPS.
+
+
+
+## Pasos para Habilitar HTTPS
+
+# Paso 1: Agregar Dependencia de Tomcat Embed
+
+En tu archivo `pom.xml`, asegúrate de tener la dependencia de Tomcat Embed para poder configurar el servidor embebido con HTTPS.
+
+Codigo:
+```xml
+<dependencies>
+    ...
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-tomcat</artifactId>
+    </dependency>
+    ...
+</dependencies>
+```
+
+Imagen:
+ 
+
+
+
+
+# Paso 2: Configurar el archivo `application.properties`
+
+Añade las siguientes propiedades al archivo `application.properties` de tu proyecto:
+
+Codigo:
+```properties
+# Puerto HTTPS
+server.port=8443
+
+# Ubicación del certificado y clave privada
+server.ssl.key-store=classpath:keystore.p12
+server.ssl.key-store-password=password
+server.ssl.keyStoreType=PKCS12
+server.ssl.keyAlias=tomcat
+```
+
+Imagen:
+ 
+
+
+Asegúrate de reemplazar `keystore.p12` con el nombre real de tu archivo de certificado y clave privada, y `password` con la contraseña correspondiente.
+
+# Paso 3: Configurar el Certificado SSL
+
+Coloca tu archivo de certificado y clave privada (por ejemplo, `keystore.p12`) en la carpeta `src/main/resources`.
+
+
+
+
+
+
+
+
+
+
+# Paso 4: Habilitar HTTPS en tu Aplicación
+
+En tu clase principal (por ejemplo, `MainApplication.java`), añade la anotación `@EnableWebSecurity`:
+
+Codigo:
+
+```java
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+
+@SpringBootApplication
+@EnableWebSecurity
+public class MainApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(MainApplication.class, args);
+    }
+}
+```
+
+Imagen:
+ 
+
+
+# Paso 5: Ejecutar la Aplicación
+
+Ahora, puedes ejecutar el proyecto Java Spring Boot. Accederás a la API a través de HTTPS en el puerto 8443.
+
+```
+https://localhost:8443/tu-endpoint
+```
+ 
 
 # Getting Started
 
