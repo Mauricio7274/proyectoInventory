@@ -1,6 +1,6 @@
 
 <div align="center">
-##Cómo Levantar la API con HTTPS en Java Spring Boot
+## Cómo Levantar la API con HTTPS en Java Spring Boot
 
 Este documento proporciona instrucciones detalladas para configurar y levantar la API desarrollada en Java Spring Boot con soporte para HTTPS.
 
@@ -14,9 +14,9 @@ Antes de comenzar, asegúrate de tener los siguientes elementos:
 
 
 
-##Pasos para Habilitar HTTPS
+## Pasos para Habilitar HTTPS
 
-#Paso 1: Agregar Dependencia de Tomcat Embed
+# Paso 1: Agregar Dependencia de Tomcat Embed
 
 En tu archivo `pom.xml`, asegúrate de tener la dependencia de Tomcat Embed para poder configurar el servidor embebido con HTTPS.
 
@@ -38,7 +38,7 @@ Imagen:
 
 
 
-#Paso 2: Configurar el archivo `application.properties`
+# Paso 2: Configurar el archivo `application.properties`
 
 Añade las siguientes propiedades al archivo `application.properties` de tu proyecto:
 
@@ -60,7 +60,7 @@ Imagen:
 
 Asegúrate de reemplazar `keystore.p12` con el nombre real de tu archivo de certificado y clave privada, y `password` con la contraseña correspondiente.
 
-#Paso 3: Configurar el Certificado SSL
+# Paso 3: Configurar el Certificado SSL
 
 Coloca tu archivo de certificado y clave privada (por ejemplo, `keystore.p12`) en la carpeta `src/main/resources`.
 
@@ -73,7 +73,7 @@ Coloca tu archivo de certificado y clave privada (por ejemplo, `keystore.p12`) e
 
 
 
-#Paso 4: Habilitar HTTPS en tu Aplicación
+# Paso 4: Habilitar HTTPS en tu Aplicación
 
 En tu clase principal (por ejemplo, `MainApplication.java`), añade la anotación `@EnableWebSecurity`:
 
@@ -97,7 +97,7 @@ Imagen:
  
 
 
-#Paso 5: Ejecutar la Aplicación
+# Paso 5: Ejecutar la Aplicación
 
 Ahora, puedes ejecutar el proyecto Java Spring Boot. Accederás a la API a través de HTTPS en el puerto 8443.
 
